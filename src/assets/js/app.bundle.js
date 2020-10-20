@@ -2142,13 +2142,18 @@ document.addEventListener('DOMContentLoaded', function() {
  	/**
 	 * b. build navigation
 	 **/
-	initApp.buildNavigation(myapp_config.navHooks);
-
+	/*initApp.buildNavigation(myapp_config.navHooks);*/
+window.setTimeout(function(){       
+        myapp_config.navHooks = $('#js-nav-menu');   
+        initApp.buildNavigation(myapp_config.navHooks);
+         }, 600);   
+		 
  	/**
 	 * c. initialize nav filter
 	 **/
+	 
 	initApp.listFilter(myapp_config.navHooks, myapp_config.navFilterInput, myapp_config.navAnchor);
-
+	 
  	/**
 	 * d. run DOM misc functions
 	 **/
